@@ -173,25 +173,31 @@ B3_API bool b3IsDoublePrecision( void );
 
 /**@}*/
 
-//! @cond
-
 /// Get the absolute number of system ticks. The value is platform specific.
+/// @ingroup base
 B3_API uint64_t b3GetTicks( void );
 
 /// Get the milliseconds passed from an initial tick value.
+/// @ingroup base
 B3_API float b3GetMilliseconds( uint64_t ticks );
 
-/// Get the milliseconds passed from an initial tick value.
+/// Get the milliseconds passed from an initial tick value. Resets the passed in
+/// value to the current tick value.
+/// @ingroup base
 B3_API float b3GetMillisecondsAndReset( uint64_t* ticks );
 
 /// Yield to be used in a busy loop.
+/// @ingroup base
 B3_API void b3Yield( void );
 
 /// Sleep the current thread for a number of milliseconds.
+/// @ingroup base
 B3_API void b3Sleep( int milliseconds );
 
-// Simple djb2 hash function for determinism testing
+/// Initial value for b3Hash
+/// @ingroup base
 #define B3_HASH_INIT 5381
-B3_API uint32_t b3Hash( uint32_t hash, const uint8_t* data, int count );
 
-//! @endcond
+/// Simple djb2 hash function for determinism testing
+/// @ingroup base
+B3_API uint32_t b3Hash( uint32_t hash, const uint8_t* data, int count );
