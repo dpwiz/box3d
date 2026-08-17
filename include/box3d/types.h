@@ -529,7 +529,6 @@ typedef struct b3ShapeDef
 /// @ingroup shape
 B3_API b3ShapeDef b3DefaultShapeDef( void );
 
-//! @cond
 /// Profiling data. Times are in milliseconds.
 /// @ingroup world
 typedef struct b3Profile
@@ -591,7 +590,6 @@ typedef struct b3Counters
 	int pushBackIterations;
 	int rootIterations;
 } b3Counters;
-//! @endcond
 
 /// Joint type enumeration. This is useful because all joint types use b3JointId and sometimes you
 /// want to get the type of a joint.
