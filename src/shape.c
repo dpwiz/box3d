@@ -1056,7 +1056,7 @@ static void b3DestroyShapeAllocationForShapeChange( b3World* world, b3Shape* sha
 			break;
 	}
 
-	if ( shape->userShape != NULL )
+	if ( shape->userShape != NULL && world->destroyDebugShape != NULL )
 	{
 		world->destroyDebugShape( shape->userShape, world->userDebugShapeContext );
 		shape->userShape = NULL;
